@@ -22,5 +22,13 @@ public class StylistTest {
     assertTrue(firstStylist.equals(secondStylist));
   }
 
+  @Test
+  public void save_savesStylistIntoDatabase_true() {
+    Stylist myStylist = new Stylist("Kelly");
+    myStylist.save();
+    assertTrue(Stylist.all().get(0).equals(myStylist));
+  }
+
+
 
 }

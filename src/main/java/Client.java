@@ -72,7 +72,6 @@ public class Client {
         .addParameter("client_name", client_name)
         .addParameter("id", id)
         .executeUpdate();
-
     }
   }
 
@@ -84,6 +83,5 @@ public class Client {
         .executeUpdate();
     }
   }
-
 
 }
