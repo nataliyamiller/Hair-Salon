@@ -70,8 +70,6 @@ public class ClientTest {
     secondClient.save();
     firstClient.delete();
     assertEquals(Client.all().size(), 1);
-
-
   }
 
 }
