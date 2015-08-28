@@ -25,5 +25,12 @@ public class Client {
     this.stylist_id = stylist_id;
   }
 
+  public static List<Client> all() {
+    String sql = "SELECT id, client_name, stylist_id FROM clients";
+    try(Connection con = DB.sql2o.open()) {
+      return con.createQuery(sql).executeAndFetch(Client.class);
+    }
+  }
+
 
 }
