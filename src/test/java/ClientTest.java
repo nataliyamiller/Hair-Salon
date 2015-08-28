@@ -54,12 +54,13 @@ public class ClientTest {
   }
 
   @Test
-  public void update_updatesClientNameinDatabase_true() {
+  public void update_updatesClientinDatabase_true() {
     Client myClient = new Client("Judith", 1);
     myClient.save();
-    myClient.update("Feona");
-    Client updatedClient = Client.find(myClient.getId());
-    assertTrue(myClient.equals(updatedClient));
+    Client savedClient = Client.find(myClient.getId());
+    savedClient.update("Feona");
+    Client updatedClient = Client.find(savedClient.getId());
+    assertEquals(updatedClient.getClientName(), "Feona");
   }
 
   @Test

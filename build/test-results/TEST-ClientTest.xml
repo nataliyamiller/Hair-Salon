@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-28T16:41:59" hostname="Nataliyas-MacBook-Pro.local" time="0.371">
+<testsuite name="ClientTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-28T17:35:29" hostname="Nataliyas-MacBook-Pro.local" time="0.393">
   <properties/>
-  <testcase name="update_updatesClientNameinDatabase_true" classname="ClientTest" time="0.161"/>
-  <testcase name="save_savesStylistIdIntoDatabase_true" classname="ClientTest" time="0.043"/>
-  <testcase name="find_findsClientInDatabase_true" classname="ClientTest" time="0.036"/>
-  <testcase name="save_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.026"/>
-  <testcase name="equals_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.014"/>
-  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.017"/>
+  <testcase name="save_savesStylistIdIntoDatabase_true" classname="ClientTest" time="0.18"/>
+  <testcase name="find_findsClientInDatabase_true" classname="ClientTest" time="0.032"/>
+  <testcase name="save_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.031"/>
+  <testcase name="equals_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.009"/>
+  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.023"/>
+  <testcase name="update_updatesClientinDatabase_true" classname="ClientTest" time="0.046"/>
   <testcase name="delete_deletesClientFromDatabase_true" classname="ClientTest" time="0.043"/>
-  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.025"/>
+  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.027"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
