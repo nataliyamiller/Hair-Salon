@@ -44,5 +44,16 @@ public class Client {
     }
   }
 
+  public void save() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "INSERT INTO clients (client_name, stylist_id) VALUES (:client_name, :stylist_id)";
+      this.id = (int) con.createQuery(sql, true)
+        .addParameter("client_name", this.client_name)
+        .addParameter("stylist_id", this.stylist_id)
+        .executeUpdate()
+        .getKey();
+    }
+  }
+
 
 }

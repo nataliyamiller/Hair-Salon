@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-28T14:30:20" hostname="Nataliyas-MacBook-Pro.local" time="0.163">
+<testsuite name="ClientTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2015-08-28T15:29:59" hostname="Nataliyas-MacBook-Pro.local" time="0.248">
   <properties/>
-  <testcase name="equals_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.119"/>
-  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.044"/>
+  <testcase name="save_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.217"/>
+  <testcase name="equals_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.009"/>
+  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.02"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
