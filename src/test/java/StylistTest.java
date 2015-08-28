@@ -82,6 +82,5 @@ public class StylistTest {
     assertEquals(Client.clientsByStylist(secondStylist.getId()), secondStylist.getClients());
 
   }
-
-
+  
 }

@@ -92,6 +92,5 @@ public class Client {
         .executeAndFetch(Client.class);
     }
   }
-
-
+  
 }
