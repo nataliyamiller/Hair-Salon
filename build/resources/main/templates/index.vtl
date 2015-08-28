@@ -7,3 +7,16 @@
   <input id="name" name="name" type="text">
   <button type="submit" class="btn btn-success">Add Stylist</button>
 </form>
+
+
+
+#if($stylists)
+  <p>To manage stylist's clients, click on a stylist:</p>
+<ul>
+  #foreach($stylist in $stylists)
+    <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>
+    #end
+</ul>
+  #else
+    <p>There are no stylists in your list yet. Add your fist stylist</p>
+  #end

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StylistTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-28T19:04:57" hostname="Nataliyas-MacBook-Pro.local" time="0.301">
+<testsuite name="StylistTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-28T19:30:29" hostname="Nataliyas-MacBook-Pro.local" time="0.304">
   <properties/>
-  <testcase name="clientsPopulatedByStylist_true" classname="StylistTest" time="0.06"/>
-  <testcase name="save_savesStylistIntoDatabase_true" classname="StylistTest" time="0.042"/>
-  <testcase name="all_emptyAtFirst" classname="StylistTest" time="0.016"/>
-  <testcase name="find_findsStylistInDatabase_true" classname="StylistTest" time="0.029"/>
-  <testcase name="update_updatesStylistInDatabase_true" classname="StylistTest" time="0.042"/>
-  <testcase name="equals_returnsTrueIfStylistNamesAretheSame" classname="StylistTest" time="0.013"/>
-  <testcase name="getClients_retrievesAllClientsFromDatabase_clientsList" classname="StylistTest" time="0.054"/>
+  <testcase name="clientsPopulatedByStylist_true" classname="StylistTest" time="0.064"/>
+  <testcase name="save_savesStylistIntoDatabase_true" classname="StylistTest" time="0.029"/>
+  <testcase name="all_emptyAtFirst" classname="StylistTest" time="0.02"/>
+  <testcase name="find_findsStylistInDatabase_true" classname="StylistTest" time="0.032"/>
+  <testcase name="update_updatesStylistInDatabase_true" classname="StylistTest" time="0.056"/>
+  <testcase name="equals_returnsTrueIfStylistNamesAretheSame" classname="StylistTest" time="0.01"/>
+  <testcase name="getClients_retrievesAllClientsFromDatabase_clientsList" classname="StylistTest" time="0.048"/>
   <testcase name="delete_deletesStylistFromDatabase_true" classname="StylistTest" time="0.041"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
