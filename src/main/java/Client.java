@@ -12,7 +12,7 @@ public class Client {
     return id;
   }
 
-  public int getStylist_id() {
+  public int getStylistId() {
     return stylist_id;
   }
 
@@ -29,6 +29,18 @@ public class Client {
     String sql = "SELECT id, client_name, stylist_id FROM clients";
     try(Connection con = DB.sql2o.open()) {
       return con.createQuery(sql).executeAndFetch(Client.class);
+    }
+  }
+
+  @Override
+  public boolean equals (Object otherClient) {
+    if(!(otherClient instanceof Client)) {
+      return false;
+    } else {
+      Client myClient = (Client) otherClient;
+      return this.getClientName().equals(myClient.getClientName()) &&
+             this.getId() == myClient.getId() &&
+             this.getStylistId() == myClient.getStylistId();
     }
   }
 
