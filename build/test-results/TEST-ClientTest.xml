@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2015-08-28T15:29:59" hostname="Nataliyas-MacBook-Pro.local" time="0.248">
+<testsuite name="ClientTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2015-08-28T15:46:43" hostname="Nataliyas-MacBook-Pro.local" time="0.297">
   <properties/>
-  <testcase name="save_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.217"/>
-  <testcase name="equals_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.009"/>
-  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.02"/>
+  <testcase name="find_findsClientInDatabase_true" classname="ClientTest" time="0.2"/>
+  <testcase name="save_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.033"/>
+  <testcase name="equals_returnsTrueIfClientNamesAretheSame" classname="ClientTest" time="0.01"/>
+  <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.018"/>
+  <testcase name="save_assignsIdToObject" classname="ClientTest" time="0.033"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

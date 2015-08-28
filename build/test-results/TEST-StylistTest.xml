@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StylistTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-28T15:29:59" hostname="Nataliyas-MacBook-Pro.local" time="0.031">
+<testsuite name="StylistTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-08-28T15:46:43" hostname="Nataliyas-MacBook-Pro.local" time="0.034">
   <properties/>
-  <testcase name="all_emptyAtFirst" classname="StylistTest" time="0.02"/>
-  <testcase name="equals_returnsTrueIfStylistNamesAretheSame" classname="StylistTest" time="0.009"/>
+  <testcase name="all_emptyAtFirst" classname="StylistTest" time="0.022"/>
+  <testcase name="equals_returnsTrueIfStylistNamesAretheSame" classname="StylistTest" time="0.011"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
