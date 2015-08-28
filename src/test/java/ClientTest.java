@@ -62,4 +62,16 @@ public class ClientTest {
     assertTrue(myClient.equals(updatedClient));
   }
 
+  @Test
+  public void delete_deletesClientFromDatabase_true() {
+    Client firstClient = new Client("Judith", 1);
+    firstClient.save();
+    Client secondClient = new Client("Feona", 1);
+    secondClient.save();
+    firstClient.delete();
+    assertEquals(Client.all().size(), 1);
+
+
+  }
+
 }
