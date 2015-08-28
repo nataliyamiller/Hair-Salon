@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-08-28T19:54:24" hostname="Nataliyas-MacBook-Pro.local" time="0.844">
+<testsuite name="AppTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2015-08-28T20:53:17" hostname="Nataliyas-MacBook-Pro.local" time="0.924">
   <properties/>
-  <testcase name="stylistIsDisplayedOnItsPageTest" classname="AppTest" time="0.544"/>
-  <testcase name="rootTest" classname="AppTest" time="0.044"/>
+  <testcase name="stylistIsDisplayedOnItsPageTest" classname="AppTest" time="0.568"/>
+  <testcase name="rootTest" classname="AppTest" time="0.041"/>
+  <testcase name="clientIsAddedAndDisplayed" classname="AppTest" time="0.108"/>
   <testcase name="stylistClientsFormIsDisplayed" classname="AppTest" time="0.05"/>
-  <testcase name="stylistIsAddedTest" classname="AppTest" time="0.185"/>
+  <testcase name="stylistIsAddedTest" classname="AppTest" time="0.127"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Thread-4] INFO spark.webserver.SparkServer - == Spark has ignited ...
 [Thread-4] INFO spark.webserver.SparkServer - >> Listening on 0.0.0.0:4567
 [Thread-4] INFO org.eclipse.jetty.server.Server - jetty-9.0.2.v20130417
-[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@325d9a44{HTTP/1.1}{0.0.0.0:4567}
+[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@4d18f191{HTTP/1.1}{0.0.0.0:4567}
 [Test worker] INFO spark.webserver.SparkServer - >>> Spark shutting down ...
-[Test worker] INFO org.eclipse.jetty.server.Server - Graceful shutdown org.eclipse.jetty.server.Server@f0d6dc5 by 
-[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@325d9a44{HTTP/1.1}{0.0.0.0:4567}
+[Test worker] INFO org.eclipse.jetty.server.Server - Graceful shutdown org.eclipse.jetty.server.Server@344fdf68 by 
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@4d18f191{HTTP/1.1}{0.0.0.0:4567}
 [Test worker] INFO spark.webserver.SparkServer - done
 ]]></system-err>
 </testsuite>
