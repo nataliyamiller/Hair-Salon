@@ -1,0 +1,23 @@
+#if($clients.size() != 0)
+  <p>Here are $stylist.getName()'s clients:</p>
+  <ul>
+    #foreach($client in $clients)
+  <li><a href="/stylists/$stylist.getId()/clients/$client.getId()/update">$client.getName()</a></li>
+  #end
+</ul>
+  #else
+  <p>This stylist doesn't have any clients yet!</p>
+  #end
+
+
+  <h3>Add a client to $stylist.getName()'s list:</h3>
+
+    <form action="/stylists/$stylist.getId()/clients" method="post">
+
+    <div class="form-group">
+      <label for="client_name">Add a client</label>
+      <input id="client_name" name="client_name" type="text">
+    </div>
+
+    <button type="submit" class="btn btn-success">Add client</button>
+  </form>

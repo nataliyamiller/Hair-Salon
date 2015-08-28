@@ -40,5 +40,25 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Derek");
   }
 
+  @Test
+  public void stylistIsDisplayedOnItsPageTest() {
+    Stylist myStylist = new Stylist("Monica");
+    myStylist.save();
+    String stylistPath = String.format("http://localhost:4567/stylists/%d", myStylist.getId());
+    goTo(stylistPath);
+    assertThat(pageSource()).contains("Monica");
+  }
+
+  @Test
+  public void stylistClientsFormIsDisplayed() {
+    Stylist myStylist = new Stylist("Drake");
+    myStylist.save();
+    String stylistPath = String.format("http://localhost:4567/stylists/%d", myStylist.getId());
+    goTo(stylistPath);
+    assertThat(pageSource()).contains("Add a client");
+  }
+
+
+
 
 }
