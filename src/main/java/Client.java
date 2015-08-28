@@ -84,4 +84,14 @@ public class Client {
     }
   }
 
+  public static List<Client> clientsByStylist(int stylist_id) {
+    String sql = "SELECT id, client_name, stylist_id FROM clients WHERE stylist_id = :stylist_id";
+    try(Connection con = DB.sql2o.open()) {
+      return con.createQuery(sql)
+        .addParameter("stylist_id", stylist_id)
+        .executeAndFetch(Client.class);
+    }
+  }
+
+
 }

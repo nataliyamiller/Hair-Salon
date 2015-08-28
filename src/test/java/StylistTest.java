@@ -69,4 +69,19 @@ public class StylistTest {
     assertEquals(Stylist.all().size(), 1);
   }
 
+  @Test
+  public void clientsPopulatedByStylist_true() {
+    Stylist firstStylist = new Stylist("Kelly");
+    firstStylist.save();
+    Stylist secondStylist = new Stylist("Derek");
+    secondStylist.save();
+    Client firstClient = new Client("Judith", firstStylist.getId());
+    firstClient.save();
+    Client secondClient = new Client("Feona", secondStylist.getId());
+    secondClient.save();
+    assertEquals(Client.clientsByStylist(secondStylist.getId()), secondStylist.getClients());
+
+  }
+
+
 }
