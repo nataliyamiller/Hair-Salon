@@ -1,5 +1,5 @@
 #if($clients.size() != 0)
-  <p>Here are $stylist.getName()'s clients:</p>
+  <h2>Here are $stylist.getName()'s clients:</h2>
   <ul>
     #foreach($client in $clients)
   <li><a href="/stylists/$stylist.getId()/clients/$client.getId()/update">$client.getClientName()</a></li>
