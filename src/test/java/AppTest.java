@@ -53,7 +53,7 @@ public class AppTest extends FluentTest {
     myStylist.save();
     String stylistPath = String.format("http://localhost:4567/stylists/%d", myStylist.getId());
     goTo(stylistPath);
-    assertThat(pageSource()).contains("Add a client");
+    assertThat(pageSource()).contains("Add a new client");
   }
 
   @Test

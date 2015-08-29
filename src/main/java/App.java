@@ -69,7 +69,6 @@ public class App {
       return null;
     });
 
-
     post("/stylists/:id/delete", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       Stylist stylist = Stylist.find(Integer.parseInt(request.params(":id")));
