@@ -1,6 +1,12 @@
-<h1>List of Stylists</h1>
+<h1>Hair Salon for Everyone!</h1>
 
-<h2>Add stylists:</h2>
+<img src="../images/salon1.jpg" alt="Picture of a hair salon">
+<img src="../images/salon2.jpg" alt="Picture of men's hair styles">
+
+
+<h2>List of Stylists</h2>
+
+<h3>Add a new stylist:</h3>
 
 <form action="/stylists" method="post">
   <label for="name">Stylist</label>
@@ -11,7 +17,7 @@
 
 
 #if($stylists)
-  <p>To manage stylist's clients, click on a stylist:</p>
+  <p>To manage stylists' clients, click on the stylist name:</p>
 <ul>
   #foreach($stylist in $stylists)
     <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>
@@ -20,3 +26,7 @@
   #else
     <p>There are no stylists in your list yet. Add your fist stylist</p>
   #end
+
+  <footer class="row>">
+    <a href="http://www.freepik.com/free-photos-vectors/background">Background vector designed by Freepik</a>
+  </footer>
