@@ -24,7 +24,7 @@
   <p>To manage each stylist's clients, click on the stylist's name:</p>
 <ul>
   #foreach($stylist in $stylists)
-    <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>
+<li><span class="glyphicon glyphicon-scissors"><a href="/stylists/$stylist.getId()">  $stylist.getName()</a></span></li>
     #end
 </ul>
   #else
