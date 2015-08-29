@@ -1,8 +1,13 @@
+body {
+  background-color: #CCFFFF;
+}
+
 h1 {
   text-align: center;
   font-size: 48px;
   font-weight: bold;
   font-family: sans-serif;
+  color: #660099;
 }
 
 img {
@@ -12,9 +17,27 @@ img {
 }
 
 footer {
-  padding: 3em 0;
-  margin: 4em 0;
-  border-top: 1px solid #ddd;
-  color: #999;
-  text-align: center;
+  clear: both;
+  margin-top: 2em;
+  padding-top: 0.25em;
+  font-style: italic;
+  font-size: smaller;
+  color: gray;
+  text-align: right;
+  height: 5px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #333;
+  text-decoration: underline;
+}
+
+a {
+  font-weight: bold;
+  font-size: 14px;
+
 }

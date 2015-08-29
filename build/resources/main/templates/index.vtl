@@ -21,7 +21,7 @@
   <article class="col-lg-6 col-lg-offset-1 col-sm-6 col-sm-offset-1">
     <h2>List of Stylists</h2>
 #if($stylists)
-  <p>To manage each stylist's clients, click on the stylist's name:</p>
+  <h3>To manage each stylist's clients, click on stylist's name:</h3>
 <ul>
   #foreach($stylist in $stylists)
 <li><span class="glyphicon glyphicon-scissors"><a href="/stylists/$stylist.getId()">  $stylist.getName()</a></span></li>
@@ -44,5 +44,5 @@
 </div>
 
   <footer class="row>">
-    <p><small><a href="http://www.freepik.com/free-photos-vectors/background">Background vector designed by Freepik</a></small></p>
+    <p><a href="http://www.freepik.com/free-photos-vectors/background">Background vector designed by Freepik</a></p>
   </footer>

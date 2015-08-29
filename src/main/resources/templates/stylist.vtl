@@ -1,19 +1,22 @@
-<header class="row">
+
 #if($clients.size() != 0)
   <h2>Here are $stylist.getName()'s clients:</h2>
+
+  <table class="table">
   <h5>Plase click on client to update client's information or to delete client from $stylist.getName()'s list</h5>
-</header>
-  <div class="row">
+
+
   <ul>
     #foreach($client in $clients)
   <li><a href="/stylists/$stylist.getId()/clients/$client.getId()/update">$client.getClientName() , $client.getPhone()</a></li>
 
   #end
 </ul>
+  </table>
   #else
-  <p>$stylist.getName() doesn't have any clients yet!</p>
+  <h2>$stylist.getName() doesn't have any clients yet!</h2>
   #end
-</div>
+
 
 
   <h3>Add a new client to $stylist.getName()'s list:</h3>
