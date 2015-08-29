@@ -10,7 +10,7 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
@@ -30,7 +30,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: clients; Type: TABLE; Schema: public; Owner: nataliyamiller; Tablespace:
+-- Name: clients; Type: TABLE; Schema: public; Owner: nataliyamiller; Tablespace: 
 --
 
 CREATE TABLE clients (
@@ -65,7 +65,7 @@ ALTER SEQUENCE clients_id_seq OWNED BY clients.id;
 
 
 --
--- Name: stylists; Type: TABLE; Schema: public; Owner: nataliyamiller; Tablespace:
+-- Name: stylists; Type: TABLE; Schema: public; Owner: nataliyamiller; Tablespace: 
 --
 
 CREATE TABLE stylists (
@@ -151,7 +151,7 @@ SELECT pg_catalog.setval('stylists_id_seq', 9, true);
 
 
 --
--- Name: clients_pkey; Type: CONSTRAINT; Schema: public; Owner: nataliyamiller; Tablespace:
+-- Name: clients_pkey; Type: CONSTRAINT; Schema: public; Owner: nataliyamiller; Tablespace: 
 --
 
 ALTER TABLE ONLY clients
@@ -159,7 +159,7 @@ ALTER TABLE ONLY clients
 
 
 --
--- Name: stylists_pkey; Type: CONSTRAINT; Schema: public; Owner: nataliyamiller; Tablespace:
+-- Name: stylists_pkey; Type: CONSTRAINT; Schema: public; Owner: nataliyamiller; Tablespace: 
 --
 
 ALTER TABLE ONLY stylists
@@ -179,3 +179,4 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
+
