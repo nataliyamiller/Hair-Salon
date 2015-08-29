@@ -1,23 +1,27 @@
+
 <h1>Hair Salon for Everyone!</h1>
 
-<img src="../images/salon1.jpg" alt="Picture of a hair salon">
-<img src="../images/salon2.jpg" alt="Picture of men's hair styles">
+<header class="row">
+  <div class="col-lg-4 col-sm-5">
+    <img src="../images/salon1.jpg" alt="Picture of a hair salon" class="pull-left">
+  </div>
+  <div class="col-lg-3 col-sm-2">
+    <p>Our address:</p>
+    <p>222 Some Street Ste.222</p>
+    <p>Portland, OR 97204</p>
+    <p>Phone: 999-99-9999</p>
+    <p>E-mail: hairsalonforeveryoneatepicodus@somesite.com</p>
+  </div>
+  <div class="col-lg-4 col-lg-offset-1 col-sm-4 col-sm-offset-1">
+    <img src="../images/salon2.jpg" alt="Picture of men's hair styles" class="pull-right">
+  </div>
+</header>
 
-
-<h2>List of Stylists</h2>
-
-<h3>Add a new stylist:</h3>
-
-<form action="/stylists" method="post">
-  <label for="name">Stylist</label>
-  <input id="name" name="name" type="text">
-  <button type="submit" class="btn btn-success">Add Stylist</button>
-</form>
-
-
-
+<div class="row">
+  <article class="col-lg-6 col-lg-offset-1 col-sm-6 col-sm-offset-1">
+    <h2>List of Stylists</h2>
 #if($stylists)
-  <p>To manage stylist's clients, click on a stylist:</p>
+  <p>To manage stylists' clients, click on the stylist name:</p>
 <ul>
   #foreach($stylist in $stylists)
     <li><a href="/stylists/$stylist.getId()">$stylist.getName()</a></li>
@@ -26,6 +30,18 @@
   #else
     <p>There are no stylists in your list yet. Add your fist stylist</p>
   #end
+</article>
+
+
+  <article class="col-lg-5 col-sm-5">
+  <h3>Add a new stylist:</h3>
+  <form action="/stylists" method="post">
+    <label for="name">Stylist</label>
+    <input id="name" name="name" type="text">
+    <button type="submit" class="btn btn-success">Add Stylist</button>
+  </form>
+</article>
+</div>
 
   <footer class="row>">
     <a href="http://www.freepik.com/free-photos-vectors/background">Background vector designed by Freepik</a>
