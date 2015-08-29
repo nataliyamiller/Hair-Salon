@@ -1,10 +1,23 @@
-<h2>Update $client.getClientName()'s name:</h2>
+<h2>Update $client.getClientName()'s info:</h2>
 
-<form action="/stylists/$stylist.getId()/clients/$client.getId()/update" method="post">
-  <label for="client_name">Update client</label>
-  <input id="client_name" name="client_name" type="text">
+<form action="/stylists/$stylist.getId()/clients/$client.getId()/update/name" method="post">
+  <div class="form-group">
+    <label for="client_name">Update client's name</label>
+    <input id="client_name" name="client_name" type="text">
+  </div>
   <button type="submit" class="btn btn-success">Submit</button>
 </form>
+
+
+  <form action="/stylists/$stylist.getId()/clients/$client.getId()/update/phone" method="post">
+
+  <div class="form-group">
+    <label for="client_phone">Update client's phone</label>
+    <input id="client_phone" name="client_phone" type="text">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
 
 
 <br>

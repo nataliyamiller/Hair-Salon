@@ -41,9 +41,9 @@ public class StylistTest {
   public void getClients_retrievesAllClientsFromDatabase_clientsList() {
     Stylist myStylist = new Stylist("Kelly");
     myStylist.save();
-    Client firstClient = new Client("Judith", myStylist.getId());
+    Client firstClient = new Client("Judith", "503-305-3355", myStylist.getId());
     firstClient.save();
-    Client secondClient = new Client("Feona", myStylist.getId());
+    Client secondClient = new Client("Feona", "971-205-5555", myStylist.getId());
     secondClient.save();
     Client[] clients = new Client[] {firstClient, secondClient};
     assertTrue(myStylist.getClients().containsAll(Arrays.asList(clients)));
@@ -75,12 +75,11 @@ public class StylistTest {
     firstStylist.save();
     Stylist secondStylist = new Stylist("Derek");
     secondStylist.save();
-    Client firstClient = new Client("Judith", firstStylist.getId());
+    Client firstClient = new Client("Judith", "503-205-3355", firstStylist.getId());
     firstClient.save();
-    Client secondClient = new Client("Feona", secondStylist.getId());
+    Client secondClient = new Client("Feona", "971-225-8777", secondStylist.getId());
     secondClient.save();
     assertEquals(Client.clientsByStylist(secondStylist.getId()), secondStylist.getClients());
 
   }
-  
 }

@@ -2,7 +2,7 @@
   <h2>Here are $stylist.getName()'s clients:</h2>
   <ul>
     #foreach($client in $clients)
-  <li><a href="/stylists/$stylist.getId()/clients/$client.getId()/update">$client.getClientName()</a></li>
+  <li><a href="/stylists/$stylist.getId()/clients/$client.getId()/update">$client.getClientName() , $client.getPhone()</a></li>
   #end
 </ul>
   #else
@@ -15,12 +15,18 @@
     <form action="/stylists/$stylist.getId()/clients" method="post">
 
     <div class="form-group">
-      <label for="client_name">Add a client</label>
+      <label for="client_name">Add client's name</label>
       <input id="client_name" name="client_name" type="text">
     </div>
+    <div class="form-group">
+      <label for="client_phone">Add client's phone</label>
+      <input id="client_phone" name="client_phone" type="text">
+    </div>
 
-    <button type="submit" class="btn btn-success">Add client</button>
+    <button type="submit" class="btn btn-success">Add client's name</button>
   </form>
+
+
 
   <form action="/stylists/$stylist.getId()/update">
 
