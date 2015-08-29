@@ -1,4 +1,4 @@
-# _Hair Salon for Everone_
+# _Hair Salon for Everyone_
 
 ####_by Nataliya Bareeva-Miller_
 
