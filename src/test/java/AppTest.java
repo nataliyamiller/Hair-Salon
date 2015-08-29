@@ -107,17 +107,17 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("503-553-5555");
   }
 
-  // @Test
-  // public void update_UpdatesAndDisplaysUpdatedStylist() {
-  //   Stylist myStylist = new Stylist("Derek");
-  //   myStylist.save();
-  //   Stylist savedStylist = Stylist.find(myStylist.getId());
-  //   savedStylist.update("Feona");
-  //   String updatedStylistPath = String.format("http://localhost:4567");
-  //   goTo(updatedStylistPath);
-  //   assertThat(pageSource()).contains("Feona");
-  // }
-  //
+  @Test
+  public void update_UpdatesAndDisplaysUpdatedStylist() {
+    Stylist myStylist = new Stylist("Derek");
+    myStylist.save();
+    Stylist savedStylist = Stylist.find(myStylist.getId());
+    savedStylist.update("Feona");
+    String updatedStylistPath = String.format("http://localhost:4567/stylists/%d/clients", myStylist.getId());
+    goTo(updatedStylistPath);
+    assertThat(pageSource()).contains("Feona");
+  }
+
   // @Test
   // public void delete_DeletedStylistNoLongerDisplayed() {
   //   Stylist myStylist = new Stylist("Derek");

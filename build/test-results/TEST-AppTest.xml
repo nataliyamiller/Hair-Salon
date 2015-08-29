@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-29T05:13:42" hostname="Nataliyas-MacBook-Pro.local" time="1.085">
+<testsuite name="AppTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2015-08-29T05:15:53" hostname="Nataliyas-MacBook-Pro.local" time="1.163">
   <properties/>
-  <testcase name="formToUpdateClientIsDisplayed" classname="AppTest" time="0.506"/>
-  <testcase name="stylistIsDisplayedOnItsPageTest" classname="AppTest" time="0.064"/>
-  <testcase name="updatePhone_UpdatesAndDisplaysUpdatedClientPhone" classname="AppTest" time="0.085"/>
-  <testcase name="rootTest" classname="AppTest" time="0.035"/>
-  <testcase name="clientIsAddedAndDisplayed" classname="AppTest" time="0.07"/>
-  <testcase name="updateName_UpdatesAndDisplaysUpdatedClientName" classname="AppTest" time="0.07"/>
-  <testcase name="stylistClientsFormIsDisplayed" classname="AppTest" time="0.071"/>
-  <testcase name="stylistIsAddedTest" classname="AppTest" time="0.134"/>
+  <testcase name="formToUpdateClientIsDisplayed" classname="AppTest" time="0.537"/>
+  <testcase name="stylistIsDisplayedOnItsPageTest" classname="AppTest" time="0.066"/>
+  <testcase name="updatePhone_UpdatesAndDisplaysUpdatedClientPhone" classname="AppTest" time="0.081"/>
+  <testcase name="rootTest" classname="AppTest" time="0.036"/>
+  <testcase name="clientIsAddedAndDisplayed" classname="AppTest" time="0.075"/>
+  <testcase name="updateName_UpdatesAndDisplaysUpdatedClientName" classname="AppTest" time="0.078"/>
+  <testcase name="update_UpdatesAndDisplaysUpdatedStylist" classname="AppTest" time="0.062"/>
+  <testcase name="stylistClientsFormIsDisplayed" classname="AppTest" time="0.061"/>
+  <testcase name="stylistIsAddedTest" classname="AppTest" time="0.12"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Thread-4] INFO spark.webserver.SparkServer - == Spark has ignited ...
 [Thread-4] INFO spark.webserver.SparkServer - >> Listening on 0.0.0.0:4567
 [Thread-4] INFO org.eclipse.jetty.server.Server - jetty-9.0.2.v20130417
-[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@6abdafcb{HTTP/1.1}{0.0.0.0:4567}
+[Thread-4] INFO org.eclipse.jetty.server.ServerConnector - Started ServerConnector@52cb5160{HTTP/1.1}{0.0.0.0:4567}
 [Test worker] INFO spark.webserver.SparkServer - >>> Spark shutting down ...
-[Test worker] INFO org.eclipse.jetty.server.Server - Graceful shutdown org.eclipse.jetty.server.Server@345d4f0 by 
-[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@6abdafcb{HTTP/1.1}{0.0.0.0:4567}
+[Test worker] INFO org.eclipse.jetty.server.Server - Graceful shutdown org.eclipse.jetty.server.Server@fa00d37 by 
+[Test worker] INFO org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@52cb5160{HTTP/1.1}{0.0.0.0:4567}
 [Test worker] INFO spark.webserver.SparkServer - done
 ]]></system-err>
 </testsuite>
