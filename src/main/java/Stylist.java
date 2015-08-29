@@ -51,8 +51,8 @@ public class Stylist {
         .addParameter("id", id)
         .executeAndFetchFirst(Stylist.class);
       return stylist;
+    }
   }
-}
 
   public List<Client> getClients() {
     try(Connection con = DB.sql2o.open()) {

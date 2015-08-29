@@ -80,6 +80,6 @@ public class StylistTest {
     Client secondClient = new Client("Feona", "971-225-8777", secondStylist.getId());
     secondClient.save();
     assertEquals(Client.clientsByStylist(secondStylist.getId()), secondStylist.getClients());
-
   }
+  
 }
