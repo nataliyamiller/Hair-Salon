@@ -91,7 +91,7 @@ public class AppTest extends FluentTest {
     savedClient.updateName("Feona");
     String updatedClientPath = String.format("http://localhost:4567/stylists/%d/clients", myStylist.getId());
     goTo(updatedClientPath);
-    assertThat(pageSource()).contains("Feona");
+    assertThat(pageSource()).contains("Feona", "971-253-5558");
   }
 
   @Test
@@ -104,7 +104,7 @@ public class AppTest extends FluentTest {
     savedClient.updatePhone("503-553-5555");
     String updatedClientPath = String.format("http://localhost:4567/stylists/%d/clients", myStylist.getId());
     goTo(updatedClientPath);
-    assertThat(pageSource()).contains("503-553-5555");
+    assertThat(pageSource()).contains("Melissa , 503-553-5555");
   }
 
   @Test
@@ -118,28 +118,28 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Feona");
   }
 
-  // @Test
-  // public void delete_DeletedStylistNoLongerDisplayed() {
-  //   Stylist myStylist = new Stylist("Derek");
-  //   myStylist.save();
-  //   Stylist savedStylist = Stylist.find(myStylist.getId());
-  //   savedStylist.delete();
-  //   String deletedStylistPath = String.format("http://localhost:4567");
-  //   goTo(deletedStylistPath);
-  //   assertThat(!(pageSource()).contains("Derek"));
-  // }
-  //
-  // @Test
-  // public void delete_DeletedClientNoLongerDisplayed() {
-  //   Stylist myStylist = new Stylist("Derek");
-  //   myStylist.save();
-  //   Client myClient = new Client("Feona", myStylist.getId());
-  //   myClient.save();
-  //   Client savedClient = Client.find(myClient.getId());
-  //   savedClient.delete();
-  //   String deletedClientPath = String.format("http://localhost:4567/stylists/%d", myStylist.getId());
-  //   goTo(deletedClientPath);
-  //   assertThat(!(pageSource()).contains("Feona"));
-  // }
+  @Test
+  public void delete_DeletedStylistNoLongerDisplayed() {
+    Stylist myStylist = new Stylist("Derek");
+    myStylist.save();
+    Stylist savedStylist = Stylist.find(myStylist.getId());
+    savedStylist.delete();
+    String deletedStylistPath = String.format("http://localhost:4567");
+    goTo(deletedStylistPath);
+    assertThat(!(pageSource()).contains("Derek"));
+  }
+
+  @Test
+  public void delete_DeletedClientNoLongerDisplayed() {
+    Stylist myStylist = new Stylist("Derek");
+    myStylist.save();
+    Client myClient = new Client("Feona", "971-222-3534", myStylist.getId());
+    myClient.save();
+    Client savedClient = Client.find(myClient.getId());
+    savedClient.delete();
+    String deletedClientPath = String.format("http://localhost:4567/stylists/%d", myStylist.getId());
+    goTo(deletedClientPath);
+    assertThat(!(pageSource()).contains("Feona , 971-222-3534"));
+  }
 
 }
