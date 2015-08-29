@@ -24,19 +24,24 @@ Note: after deleting a particular stylist, that stylist's clients will still rem
 
 
 ## Set Up
+
 * _In PSQL:
-  _CREATE DATABASE hair_salon;_
-  _CREATE TABLE stylists (id serial PRIMARY KEY, name varchar);_
-  _CREATE TABLE clients (id serial PRIMARY KEY, client_name varchar, client_phone varchar, stylist_id int);_
+- CREATE DATABASE hair_salon;
+- CREATE TABLE stylists (id serial PRIMARY KEY, name varchar);
+- CREATE TABLE clients (id serial PRIMARY KEY, client_name varchar, client_phone varchar, stylist_id int);
+
+* _In command line:_
+- psql hair_salon < salon.sql
 
 * _Clone this repository and run with Gradle (type ``gradle run`` in your command line). Then open localhost:4567 in your browser._
 
 
 ## Tests
 
-_There are both unit and integration tests associated with this application. The test files can be found in the /src/test/java folder.
-To run the tests:
-_In PSQL: CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon. Type ``gradle test`` in your command line._
+_There are both unit and integration tests associated with this application. The test files can be found in the /src/test/java folder._
+* _To run the tests:
+- In PSQL: CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon.
+- Type ``gradle test`` in your command line.
 
 
 ## Technologies Used
