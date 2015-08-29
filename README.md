@@ -40,7 +40,7 @@ Note: after deleting a particular stylist, that stylist's clients will still rem
 
 _There are both unit and integration tests associated with this application. The test files can be found in the /src/test/java folder._
 * _To run the tests:_
- ``CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon;`` in PSQL then type
+ In PSQL -> ``CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon;`` then type
 ``gradle test`` in your command line.
 
 
