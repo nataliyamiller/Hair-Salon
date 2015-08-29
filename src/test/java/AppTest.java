@@ -81,19 +81,19 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Update Melissa's info");
   }
 
-  // @Test
-  // public void update_UpdatesAndDisplaysUpdatedClient() {
-  //   Stylist myStylist = new Stylist("Derek");
-  //   myStylist.save();
-  //   Client myClient = new Client("Melissa", myStylist.getId());
-  //   myClient.save();
-  //   Client savedClient = Client.find(myClient.getId());
-  //   savedClient.update("Feona");
-  //   String updatedClientPath = String.format("http://localhost:4567/stylists/%d/clients", myStylist.getId());
-  //   goTo(updatedClientPath);
-  //   assertThat(pageSource()).contains("Feona");
-  // }
-  //
+  @Test
+  public void updateName_UpdatesAndDisplaysUpdatedClientName() {
+    Stylist myStylist = new Stylist("Derek");
+    myStylist.save();
+    Client myClient = new Client("Melissa", "971-253-5558", myStylist.getId());
+    myClient.save();
+    Client savedClient = Client.find(myClient.getId());
+    savedClient.updateName("Feona");
+    String updatedClientPath = String.format("http://localhost:4567/stylists/%d/clients", myStylist.getId());
+    goTo(updatedClientPath);
+    assertThat(pageSource()).contains("Feona");
+  }
+
   // @Test
   // public void update_UpdatesAndDisplaysUpdatedStylist() {
   //   Stylist myStylist = new Stylist("Derek");
