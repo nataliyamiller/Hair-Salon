@@ -96,5 +96,16 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Feona");
   }
 
+  @Test
+  public void update_UpdatesStylistInDatabase() {
+    Stylist myStylist = new Stylist("Derek");
+    myStylist.save();
+    Stylist savedStylist = Stylist.find(myStylist.getId());
+    savedStylist.update("Feona");
+    String updatedStylistPath = String.format("http://localhost:4567");
+    goTo(updatedStylistPath);
+    assertThat(pageSource()).contains("Feona");
+  }
+
 
 }
