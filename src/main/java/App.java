@@ -73,6 +73,15 @@ public class App {
       return null;
     });
 
+    post("/stylists/:id/delete", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      Stylist stylist = Stylist.find(Integer.parseInt(request.params(":id")));
+      // model.put("template", "templates/index.vtl");
+      stylist.delete();
+      response.redirect("/");
+      return null;
+    });
+
     post("/stylists/:id/clients", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       Stylist stylist = Stylist.find(Integer.parseInt(request.params(":id")));
