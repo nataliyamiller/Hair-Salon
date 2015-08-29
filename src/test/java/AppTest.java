@@ -84,7 +84,7 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void update_UpdatesClientInDatabase() {
+  public void update_UpdatesAndDisplaysUpdatedClient() {
     Stylist myStylist = new Stylist("Derek");
     myStylist.save();
     Client myClient = new Client("Melissa", myStylist.getId());
@@ -97,7 +97,7 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void update_UpdatesStylistInDatabase() {
+  public void update_UpdatesAndDisplaysUpdatedStylist() {
     Stylist myStylist = new Stylist("Derek");
     myStylist.save();
     Stylist savedStylist = Stylist.find(myStylist.getId());
@@ -108,7 +108,7 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void delete_deleteStylistFromDatabase() {
+  public void delete_DeletedStylistNoLongerDisplayed() {
     Stylist myStylist = new Stylist("Derek");
     myStylist.save();
     Stylist savedStylist = Stylist.find(myStylist.getId());
@@ -116,6 +116,19 @@ public class AppTest extends FluentTest {
     String deletedStylistPath = String.format("http://localhost:4567");
     goTo(deletedStylistPath);
     assertThat(!(pageSource()).contains("Derek"));
+  }
+
+  @Test
+  public void delete_DeletedClientNoLongerDisplayed() {
+    Stylist myStylist = new Stylist("Derek");
+    myStylist.save();
+    Client myClient = new Client("Feona", myStylist.getId());
+    myClient.save();
+    Client savedClient = Client.find(myClient.getId());
+    savedClient.delete();
+    String deletedClientPath = String.format("http://localhost:4567/stylists/%d", myStylist.getId());
+    goTo(deletedClientPath);
+    assertThat(!(pageSource()).contains("Feona"));
   }
 
 
